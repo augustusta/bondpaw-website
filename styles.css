@@ -1,16 +1,17 @@
 :root {
-  --ink: #12140f;
-  --muted: #46513f;
-  --line: rgba(18, 20, 15, 0.14);
-  --paper: #fffdf4;
-  --soft: #f2f9dd;
-  --green: #11763f;
-  --green-dark: #074f2a;
-  --lime: #d9f85c;
-  --pink: #ff8bb5;
-  --coral: #ff6f4d;
-  --blue: #172662;
-  --sky: #b9eeff;
+  --ink: #182118;
+  --muted: #5f6b5d;
+  --line: rgba(31, 48, 36, 0.14);
+  --paper: #fbf7ef;
+  --soft: #eef4e7;
+  --green: #2f6a4f;
+  --green-dark: #183f2f;
+  --lime: #d8e8a4;
+  --pink: #d8a6a7;
+  --coral: #c97865;
+  --blue: #20362f;
+  --sky: #dce9e4;
+  --gold: #bca380;
   --white: #ffffff;
   --radius: 14px;
   --ease: cubic-bezier(0.2, 0, 0, 1);
@@ -23,21 +24,34 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 8% 4%, rgba(217, 248, 92, 0.42), transparent 28rem),
-    radial-gradient(circle at 100% 10%, rgba(255, 139, 181, 0.28), transparent 24rem),
-    var(--paper);
+    radial-gradient(circle at 8% 4%, rgba(216, 232, 164, 0.34), transparent 30rem),
+    radial-gradient(circle at 100% 10%, rgba(216, 166, 167, 0.18), transparent 26rem),
+    linear-gradient(180deg, #fffaf0 0%, var(--paper) 58%, #f8f2e8 100%);
   font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
   line-height: 1.55;
 }
 
 img {
   display: block;
+  max-width: 100%;
+}
+
+main,
+section,
+.site-header,
+.site-footer {
   max-width: 100%;
 }
 
@@ -77,9 +91,10 @@ textarea {
   align-items: center;
   gap: 28px;
   padding: 12px clamp(18px, 4vw, 46px);
-  background: rgba(255, 253, 244, 0.82);
+  background: rgba(251, 247, 239, 0.88);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
+  box-shadow: 0 10px 30px rgba(24, 63, 47, 0.06);
 }
 
 .logo-link {
@@ -110,7 +125,7 @@ textarea {
 }
 
 .nav-links a {
-  color: rgba(18, 20, 15, 0.74);
+  color: rgba(24, 33, 24, 0.74);
   transition: color 160ms var(--ease), transform 160ms var(--ease);
 }
 
@@ -126,7 +141,7 @@ textarea {
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  border: 2px solid var(--ink);
+  border: 1.5px solid rgba(24, 33, 24, 0.84);
   border-radius: 999px;
   padding: 11px 18px;
   color: var(--ink);
@@ -134,13 +149,15 @@ textarea {
   font-weight: 950;
   line-height: 1;
   cursor: pointer;
-  transition: transform 160ms var(--ease), background 160ms var(--ease), color 160ms var(--ease);
+  box-shadow: 0 8px 18px rgba(47, 106, 79, 0.12);
+  transition: transform 160ms var(--ease), background 160ms var(--ease), color 160ms var(--ease), box-shadow 160ms var(--ease);
 }
 
 .header-cta:hover,
 .btn:hover,
 .inline-button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(47, 106, 79, 0.16);
 }
 
 .header-cta:active,
@@ -152,10 +169,11 @@ textarea {
 .btn-primary {
   color: var(--white);
   background: var(--green);
+  border-color: var(--green-dark);
 }
 
 .btn-secondary {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .section-kicker,
@@ -169,6 +187,8 @@ textarea {
 
 .hero-section {
   width: min(100%, 1480px);
+  max-width: 100%;
+  overflow: clip;
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(320px, 0.95fr) minmax(360px, 1.05fr);
@@ -220,6 +240,7 @@ textarea {
 
 .hero-visual {
   position: relative;
+  min-width: 0;
   min-height: 620px;
 }
 
@@ -227,7 +248,7 @@ textarea {
 .hero-float-img,
 .hero-ticket {
   position: absolute;
-  border: 3px solid var(--ink);
+  border: 2px solid rgba(24, 33, 24, 0.88);
   border-radius: var(--radius);
 }
 
@@ -236,7 +257,7 @@ textarea {
   width: 78%;
   height: calc(100% - 90px);
   object-fit: cover;
-  box-shadow: 16px 16px 0 var(--lime);
+  box-shadow: 18px 18px 0 rgba(216, 232, 164, 0.92);
 }
 
 .hero-float-img {
@@ -245,14 +266,14 @@ textarea {
   width: 42%;
   aspect-ratio: 0.78;
   object-fit: cover;
-  box-shadow: -12px 12px 0 var(--pink);
+  box-shadow: -12px 12px 0 rgba(216, 166, 167, 0.9);
 }
 
 .hero-ticket {
   left: 0;
   bottom: 48px;
   max-width: 300px;
-  background: var(--blue);
+  background: linear-gradient(135deg, var(--green-dark), #253f36);
   color: var(--white);
   padding: 18px;
   transform: rotate(-4deg);
@@ -280,6 +301,7 @@ textarea {
 .faq-section,
 .site-footer {
   padding-inline: clamp(20px, 5vw, 70px);
+  max-width: 100%;
 }
 
 .social-strip {
@@ -382,11 +404,11 @@ textarea {
   display: grid;
   align-content: start;
   gap: 12px;
-  border: 2px solid var(--ink);
+  border: 1.5px solid rgba(24, 33, 24, 0.78);
   border-radius: var(--radius);
   background: var(--white);
   padding: 20px;
-  box-shadow: 8px 8px 0 rgba(17, 118, 63, 0.09);
+  box-shadow: 0 18px 38px rgba(24, 63, 47, 0.08), 7px 7px 0 rgba(216, 232, 164, 0.55);
 }
 
 .scenario-grid span {
@@ -446,18 +468,20 @@ textarea {
 }
 
 .service-tile {
+  min-width: 0;
   position: relative;
   overflow: hidden;
-  border: 3px solid var(--ink);
+  border: 2px solid rgba(24, 33, 24, 0.88);
   border-radius: var(--radius);
   background: var(--ink);
+  box-shadow: 0 22px 48px rgba(24, 63, 47, 0.12);
 }
 
 .service-tile::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(18, 20, 15, 0.02) 15%, rgba(18, 20, 15, 0.74) 100%);
+  background: linear-gradient(180deg, rgba(24, 33, 24, 0.02) 15%, rgba(24, 33, 24, 0.74) 100%);
 }
 
 .service-tile img {
@@ -532,7 +556,7 @@ textarea {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: 2px solid var(--ink);
+  border-top: 1.5px solid rgba(24, 33, 24, 0.86);
 }
 
 .process-rail li {
@@ -540,7 +564,7 @@ textarea {
   grid-template-columns: 160px 1fr;
   gap: 24px;
   padding: 22px 0;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1.5px solid rgba(24, 33, 24, 0.86);
 }
 
 .process-rail span {
@@ -554,7 +578,9 @@ textarea {
 
 .pricing-section {
   padding-block: 96px 112px;
-  background: var(--blue);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(216, 232, 164, 0.2), transparent 26rem),
+    linear-gradient(180deg, var(--blue) 0%, #172a24 100%);
   color: var(--white);
 }
 
@@ -587,11 +613,13 @@ textarea {
 .core-price-card {
   display: grid;
   gap: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.36);
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: var(--radius);
-  background: var(--paper);
+  background: rgba(251, 247, 239, 0.96);
   color: var(--ink);
   padding: 18px;
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.12);
 }
 
 .core-price-card span {
@@ -639,13 +667,14 @@ textarea {
   display: inline-flex;
   align-items: center;
   min-height: 46px;
-  border: 2px solid var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.36);
   border-radius: 999px;
-  background: var(--lime);
-  color: var(--ink);
+  background: rgba(216, 232, 164, 0.96);
+  color: var(--green-dark);
   padding: 11px 18px;
   font-weight: 950;
   cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
 }
 
 .price-search {
@@ -658,9 +687,15 @@ textarea {
 
 .price-search input {
   max-width: 460px;
-  border: 2px solid var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.36);
   border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
   padding: 12px 16px;
+  outline: none;
+}
+
+.price-search input:focus {
+  box-shadow: 0 0 0 4px rgba(216, 232, 164, 0.18);
 }
 
 .price-books {
@@ -674,19 +709,19 @@ textarea {
 .price-table-card {
   min-width: 0;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.36);
+  border: 1px solid rgba(255, 255, 255, 0.36);
   border-radius: var(--radius);
-  background: var(--paper);
+  background: rgba(251, 247, 239, 0.97);
   color: var(--ink);
-  box-shadow: 10px 10px 0 rgba(217, 248, 92, 0.15);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.16), 8px 8px 0 rgba(216, 232, 164, 0.18);
 }
 
 .price-card-head {
   display: grid;
   gap: 6px;
   padding: 18px 20px;
-  border-bottom: 2px solid var(--ink);
-  background: linear-gradient(135deg, var(--lime), #fff7b3);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(216, 232, 164, 0.9), rgba(255, 250, 240, 0.95));
 }
 
 .price-card-head p,
@@ -715,7 +750,7 @@ textarea {
 
 .price-card-head strong {
   justify-self: start;
-  border: 1px solid rgba(18, 20, 15, 0.18);
+  border: 1px solid rgba(31, 48, 36, 0.16);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.7);
   padding: 5px 10px;
@@ -724,11 +759,11 @@ textarea {
 }
 
 .price-table-wrap {
-  max-height: 460px;
+  max-height: 420px;
   overflow: auto;
   padding: 12px;
   overscroll-behavior: contain;
-  scrollbar-color: var(--green) rgba(18, 20, 15, 0.08);
+  scrollbar-color: var(--green) rgba(31, 48, 36, 0.08);
   scrollbar-width: thin;
 }
 
@@ -829,9 +864,11 @@ textarea {
 }
 
 .case-card {
+  min-width: 0;
   overflow: hidden;
-  border: 2px solid var(--ink);
+  border: 1px solid var(--line);
   background: var(--white);
+  box-shadow: 0 18px 38px rgba(24, 63, 47, 0.08);
 }
 
 .case-card img {
@@ -921,10 +958,12 @@ textarea {
 .booking-form {
   display: grid;
   gap: 16px;
-  border: 3px solid var(--ink);
+  min-width: 0;
+  border: 1px solid rgba(24, 33, 24, 0.16);
   border-radius: var(--radius);
-  background: var(--paper);
+  background: rgba(251, 247, 239, 0.96);
   padding: 20px;
+  box-shadow: 0 24px 50px rgba(24, 63, 47, 0.12);
 }
 
 .booking-form label,
@@ -952,7 +991,7 @@ textarea {
 .weekday-text {
   justify-self: start;
   border-radius: 999px;
-  background: rgba(17, 118, 63, 0.1);
+  background: rgba(47, 106, 79, 0.1);
   color: var(--green);
   padding: 2px 8px;
   font-size: 0.8rem;
@@ -966,6 +1005,7 @@ textarea {
 }
 
 .choice-group {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
@@ -978,6 +1018,9 @@ textarea {
 
 .choice-group input {
   position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
   opacity: 0;
   pointer-events: none;
 }
@@ -1032,7 +1075,7 @@ textarea {
   min-height: 34px;
   border: 0;
   border-radius: 999px;
-  background: rgba(255, 111, 77, 0.12);
+  background: rgba(201, 120, 101, 0.12);
   color: var(--coral);
   padding: 7px 11px;
   font-weight: 900;
@@ -1050,7 +1093,7 @@ textarea {
 .booking-form select,
 .booking-form textarea {
   width: 100%;
-  border: 2px solid var(--ink);
+  border: 1px solid rgba(24, 33, 24, 0.18);
   border-radius: 10px;
   background: var(--white);
   color: var(--ink);
@@ -1062,7 +1105,15 @@ textarea {
 .booking-form select:focus,
 .booking-form textarea:focus {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(17, 118, 63, 0.14);
+  box-shadow: 0 0 0 3px rgba(47, 106, 79, 0.14);
+}
+
+.booking-form .choice-group input {
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .form-wide {
@@ -1087,11 +1138,12 @@ textarea {
 }
 
 .faq-list {
-  border-top: 2px solid var(--ink);
+  min-width: 0;
+  border-top: 1px solid rgba(24, 33, 24, 0.2);
 }
 
 .faq-list details {
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1px solid rgba(24, 33, 24, 0.2);
 }
 
 .faq-list summary {
@@ -1138,7 +1190,7 @@ textarea {
   padding-block: 46px;
   color: var(--ink);
   background: var(--soft);
-  border-top: 3px solid var(--ink);
+  border-top: 1px solid rgba(24, 33, 24, 0.16);
 }
 
 .site-footer img {
@@ -1192,10 +1244,12 @@ textarea {
 }
 
 .detail-grid img {
+  min-width: 0;
   width: 100%;
-  border: 3px solid var(--ink);
+  border: 1px solid rgba(24, 33, 24, 0.18);
   border-radius: var(--radius);
   object-fit: cover;
+  box-shadow: 0 22px 48px rgba(24, 63, 47, 0.12);
 }
 
 .rich-list {
@@ -1207,10 +1261,12 @@ textarea {
 }
 
 .rich-list li {
-  border: 2px solid var(--ink);
+  min-width: 0;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--white);
   padding: 18px;
+  box-shadow: 0 16px 34px rgba(24, 63, 47, 0.06);
 }
 
 .rich-list strong {
@@ -1226,10 +1282,12 @@ textarea {
 }
 
 .team-card {
-  border: 2px solid var(--ink);
+  min-width: 0;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--white);
   padding: 20px;
+  box-shadow: 0 16px 34px rgba(24, 63, 47, 0.06);
 }
 
 .team-card h3,

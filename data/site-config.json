@@ -3,7 +3,7 @@
   "brand": {
     "name": "伴爪 BondPaw",
     "positioning": "值得信赖的新潮宠物管家",
-    "tagline": "Trustworthy Care, Trendy Life.",
+    "tagline": "In-home care, made gentle.",
     "footer": "伴爪 BondPaw，陪你把“它一个人在家”这件事变得更安心。"
   },
   "nav": [
@@ -15,11 +15,11 @@
     { "text": "FAQ", "href": "#faq" }
   ],
   "hero": {
-    "title": "你不在家时，它也该被好好照顾。",
-    "subtitle": "伴爪 BondPaw 为宠物家庭提供上门洗护、喂养、遛狗与增值护理。我们用清楚的流程、温柔的服务和及时的反馈，让你不在家时，也能放心知道它被好好照顾。",
+    "title": "放心出门，家里有伴爪。",
+    "subtitle": "出差、加班、旅行或临时走不开时，伴爪把喂养、遛狗、洗护和基础护理带到家里。熟悉的环境、清楚的流程、及时的反馈，让你不在身边，也知道它被认真照顾着。",
     "primaryButton": "立即预约",
     "secondaryButton": "查看价目表",
-    "image": "./assets/user-dog-studio.jpg",
+    "image": "./assets/hero-care.jpeg",
     "floatImage": "./assets/user-cat-portrait.jpg"
   },
   "pricing": {
@@ -32,9 +32,9 @@
     ]
   },
   "style": {
-    "primary": "#2f6a4f",
-    "secondary": "#d8e8a4",
-    "accent": "#bca380",
-    "radius": "14px"
+    "primary": "#376f51",
+    "secondary": "#e8c18a",
+    "accent": "#8b4116",
+    "radius": "28px"
   }
 }

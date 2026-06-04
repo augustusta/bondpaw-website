@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "brand": {
+    "name": "伴爪 BondPaw",
+    "positioning": "值得信赖的新潮宠物管家",
+    "tagline": "Trustworthy Care, Trendy Life.",
+    "footer": "伴爪 BondPaw，陪你把“它一个人在家”这件事变得更安心。"
+  },
+  "nav": [
+    { "text": "场景", "href": "#scenarios" },
+    { "text": "服务", "href": "#services" },
+    { "text": "流程", "href": "#process" },
+    { "text": "价格", "href": "#pricing" },
+    { "text": "案例", "href": "#cases" },
+    { "text": "预约", "href": "#booking" },
+    { "text": "FAQ", "href": "#faq" }
+  ],
+  "hero": {
+    "title": "你不在家时，它也该被好好照顾。",
+    "subtitle": "伴爪 BondPaw 为宠物家庭提供上门洗护、喂养、遛狗与增值护理。我们用清楚的流程、温柔的服务和及时的反馈，让你不在家时，也能放心知道它被好好照顾。",
+    "primaryButton": "立即预约",
+    "secondaryButton": "查看服务",
+    "image": "./assets/user-dog-studio.jpg",
+    "floatImage": "./assets/user-cat-portrait.jpg"
+  },
+  "pricing": {
+    "defaultCollapsed": true,
+    "core": [
+      { "title": "上门喂养", "price": "¥48 起", "scene": "适合出差、旅行、加班、节假日", "includes": "添粮换水、清洁排泄区、陪伴观察、状态反馈" },
+      { "title": "上门遛狗", "price": "¥68 起", "scene": "适合工作日、临时加班、精力旺盛犬", "includes": "规律外出、排便观察、牵引安全、遛后反馈" },
+      { "title": "狗狗洗护", "price": "¥98 起", "scene": "适合日常清洁、基础护理、造型评估", "includes": "基础洗护、剪指甲、清耳朵、剃脚底毛" },
+      { "title": "猫咪洗护", "price": "¥148 起", "scene": "适合敏感猫、胆小猫、家中更安心的洗护场景", "includes": "熟悉环境、低压洗护、减少应激、环境复原" }
+    ]
+  },
+  "style": {
+    "primary": "#11763f",
+    "secondary": "#d9f85c",
+    "accent": "#bca380",
+    "radius": "14px"
+  }
+}
